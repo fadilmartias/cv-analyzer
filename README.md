@@ -89,7 +89,7 @@ go run cmd/server/main.go
 
 ---
 
-##Endpoints
+## Endpoints
 
 1. POST /evaluate
 ```bash
