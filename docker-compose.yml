@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: ankane/pgvector
+    container_name: pgvector_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: cv_analyzer
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
