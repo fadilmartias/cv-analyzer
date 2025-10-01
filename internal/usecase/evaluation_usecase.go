@@ -153,27 +153,26 @@ You are an experienced technical recruiter. Analyze the following CV and Project
 
 Return your answer STRICTLY in JSON format with this schema:
 {
-	"cv_match_rate": <float with 2 decimal places, range 0-1 based on cv breakdown score>,
+	"cv_match_rate": <float with 2 decimal places, range 0-1 based on cv breakdown score that converted to percents and then x20>,
 	"cv_feedback": "<feedback about CV>",
 	"project_score": <float with 2 decimal places, range 0-10 based on project breakdown score>,
 	"project_feedback": "<feedback about Project Report>",
 	"overall_summary": "<summary of overall impression, strengths, and areas to improve>",
   "breakdown": {
     "cv": {
-	"technical_skills_match": <number 1-5, criteria: backend, databases, APIs, cloud, and AI/LLM exposure>,
-	"experience_level": <number 1-5, criteria: years, project complexity>,
-	"relevant_achievements": <number 1-5, criteria: impact, scale>,
-	"cultural_fit": <number 1-5, criteria: communication, learning attitude>,
+	"technical_skills_match": <number 1-5, weight: 40 percents, criteria: backend, databases, APIs, cloud, and AI/LLM exposure>,
+	"experience_level": <number 1-5, weight: 25 percents, criteria: years, project complexity>,
+	"relevant_achievements": <number 1-5, weight: 20 percents, criteria: impact, scale>,
+	"cultural_fit": <number 1-5, weight: 15 percents, criteria: communication, learning attitude>,
 	},
     "project_report": {
-      "correctness": <number 1-5, criteria: prompt design, chaining, RAG, handling errors>,
-      "code_quality": <number 1-5, criteria: clean, modular, testable>,
-      "resilience": <number 1-5, criteria: handles failures, retries>,
-      "documentation": <number 1-5, criteria: clear README, explanation of trade-offs>,
-      "creativity_or_bonus": <number 1-5, criteria: optional improvements like authentication, deployment, dashboards, etc.>
+      "correctness": <number 1-5, weight: 30 percents, criteria: prompt design, chaining, RAG, handling errors>,
+      "code_quality": <number 1-5, weight: 25 percents, criteria: clean, modular, testable>,
+      "resilience": <number 1-5, weight: 20 percents, criteria: handles failures, retries>,
+      "documentation": <number 1-5, weight: 15 percents, criteria: clear README, explanation of trade-offs>,
+      "creativity_or_bonus": <number 1-5, weight: 10 percents, criteria: optional improvements like authentication, deployment, dashboards, etc.>
     }
-  },
-  
+  }
 }
 
 CV:

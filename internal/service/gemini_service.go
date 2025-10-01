@@ -48,8 +48,8 @@ func NewGeminiService(ctx context.Context) (*GeminiService, error) {
 		Ctx:               ctx,
 		MaxRetries:        3,
 		BaseDelay:         time.Second,
-		MaxDelay:          60 * time.Second,
-		RequestTimeout:    60 * time.Second,
+		MaxDelay:          90 * time.Second,
+		RequestTimeout:    90 * time.Second,
 		circuitBreakerMax: 5,
 	}, nil
 }

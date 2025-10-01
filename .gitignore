@@ -1,1 +1,7 @@
 .env
+/tmp
+/uploads/cv/*
+/uploads/project_report/*
+
+!/uploads/cv/.gitkeep
+!/uploads/project_report/.gitkeep
